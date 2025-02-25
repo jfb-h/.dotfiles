@@ -17,15 +17,12 @@
 # You can remove these comments if you want or leave
 # them for future reference.
 
-# EDITOR
+use std/util "path add"
 
 $env.config.buffer_editor = "hx"
+$env.config.show_banner = false
 
-# PATH
-
-$env.PATH = ($env.PATH | split row (char esep) | append "/home/jakob/.pixi/bin")
-
-# ALIASES and CUSTOM FUNCTIONS
+path add "~/.pixi/bin"
 
 def tl [] {
     tmux ls
