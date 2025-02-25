@@ -920,7 +920,7 @@ def sumatra [file] {
 }
 
 alias mv = mv -i
-alias ll = eza --sort type --tree
+alias ll = eza --sort type --tree --git-ignore
 
 use ~/.cache/starship/init.nu
 source ~/.zoxide.nu
