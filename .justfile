@@ -25,6 +25,7 @@ install-tools: install-cargo
     curl -sS https://starship.rs/install.sh | sh -s -- -y
     sudo apt-get -y install unzip
     sudo apt install fzf
+    cargo install nu --locked
     cargo install zoxide --locked
     cargo install ripgrep
     cargo install bat
@@ -46,7 +47,7 @@ install-editors:
 
 install-languages:
     curl https://install.duckdb.org | sh
-    curl -fsSL https://install.julialang.org | sh
+    curl -fsSL https://install.julialang.org | sh -s -- -y
     pixi global install cmdstan
     curl -Ls https://github.com/r-lib/rig/releases/download/latest/rig-linux-$(arch)-latest.tar.gz | `which sudo` tar xz -C /usr/local
 
