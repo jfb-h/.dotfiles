@@ -10,18 +10,19 @@ install-basics:
     sudo apt install git
 
 setup-dotfiles:
-    git clone https://github.com/jfb-h/.dotfiles ~/.dotfiles
-    stow .dotfiles
+    # git clone https://github.com/jfb-h/.dotfiles ~/.dotfiles
+    stow .
     
 install-cargo: install-basics
     sudo apt-get -y install build-essential
     sudo apt-get -y install pkg-config
     sudo apt-get -y install openssl
     sudo apt-get -y install libssl-dev
+    sudo apt-get -y install cmake
     curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 install-tools: install-cargo
-    curl -sS https://starship.rs/install.sh | sh
+    curl -sS https://starship.rs/install.sh | sh -s -- -y
     sudo apt-get -y install unzip
     sudo apt install fzf
     cargo install zoxide --locked
@@ -34,7 +35,7 @@ install-tools: install-cargo
 install-tmux:
     sudo apt-get install tmux
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-    tmux source ~/.tmux.conf
+    #tmux source ~/.tmux.conf
 
 install-editors:
     sudo apt-get install neovim
