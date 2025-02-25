@@ -927,5 +927,8 @@ def sumatra [file] {
 alias mv = mv -i
 alias ll = eza --sort type --tree --git-ignore
 
-use ~/.cache/starship/init.nu
 source ~/.zoxide.nu
+
+# use ~/.cache/starship/init.nu
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
