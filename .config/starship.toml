@@ -1,0 +1,17 @@
+[aws]
+disabled = true
+
+[rust]
+disabled = true
+
+[python]
+disabled = true
+
+[quarto]
+disabled = true
+
+[rlang]
+disabled = true
+
+[nodejs]
+disabled = true
