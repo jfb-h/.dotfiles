@@ -898,6 +898,11 @@ $env.config = {
     ]
 }
 
+# PATH
+
+$env.PATH = ($env.PATH | split row (char esep) | append "/home/jakob/.pixi/bin")
+
+# ALIASES and CUSTOM FUNCTIONS
 
 def tl [] {
     tmux ls
