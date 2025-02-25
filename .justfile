@@ -1,7 +1,7 @@
 default:
     @just --list -u
 
-setup-system: install-basics setup-dotfiles install-cargo install-tools install-tmux install-editors install-languages
+setup-system: install-basics setup-dotfiles install-cargo install-tools install-tmux install-github install-editors install-languages
 
 install-basics:
     sudo apt install curl
@@ -36,6 +36,9 @@ install-tmux:
     sudo apt-get install tmux
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     #tmux source ~/.tmux.conf
+
+install-github:
+    pixi global install gh --channel conda-forge
 
 install-editors:
     sudo apt-get install neovim
