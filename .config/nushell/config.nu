@@ -23,6 +23,7 @@ $env.config.buffer_editor = "hx"
 $env.config.show_banner = false
 
 path add "~/.pixi/bin"
+path add "/home/jakob/.duckdb/cli/latest"
 
 def tl [] {
     tmux ls
